@@ -50,7 +50,7 @@ export default {
 
 .welcome p {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* form styles */
