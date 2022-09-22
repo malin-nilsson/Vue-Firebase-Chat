@@ -20,23 +20,31 @@
         v-model="password"
       />
     </div>
+    <div class="error">
+      {{ error }}
+    </div>
     <button>Log in</button>
   </form>
 </template>
   
   <script>
+import useLogin from "@/composables/useLogin";
 import { ref } from "@vue/reactivity";
 export default {
   setup() {
     // refs
+    const { error, login } = useLogin();
     const email = ref("");
     const password = ref("");
 
-    const handleSubmit = () => {
-      console.log(email.value, password.value);
+    const handleSubmit = async () => {
+      await login(email.value, password.value);
+      if (!error.value) {
+        console.log("user logged in");
+      }
     };
 
-    return { email, password, handleSubmit };
+    return { email, password, error, handleSubmit };
   },
 };
 </script>
