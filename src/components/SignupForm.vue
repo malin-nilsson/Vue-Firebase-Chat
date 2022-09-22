@@ -32,6 +32,9 @@
         v-model="password"
       />
     </div>
+    <div class="error">
+      {{ error }}
+    </div>
     <button>Sign up</button>
   </form>
 </template>
@@ -53,7 +56,7 @@ export default {
       console.log("user signed up");
     };
 
-    return { displayName, email, password, handleSubmit };
+    return { displayName, email, password, error, handleSubmit };
   },
 };
 </script>
