@@ -97,6 +97,5 @@ export default {
 
 button {
   @include btn();
-  transition: all 0.2s ease-in-out;
 }
 </style>
