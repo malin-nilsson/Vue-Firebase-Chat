@@ -27,11 +27,12 @@
   </form>
 </template>
   
-  <script>
+<script>
 import useLogin from "@/composables/useLogin";
 import { ref } from "@vue/reactivity";
+
 export default {
-  setup() {
+  setup(props, context) {
     // refs
     const { error, login } = useLogin();
     const email = ref("");
@@ -40,7 +41,7 @@ export default {
     const handleSubmit = async () => {
       await login(email.value, password.value);
       if (!error.value) {
-        console.log("user logged in");
+        context.emit("login");
       }
     };
 

@@ -3,12 +3,12 @@
     <h1 class="heading--lg">Welcome</h1>
     <div v-if="showLogin">
       <h2 class="heading--md">Log in</h2>
-      <LoginForm />
+      <LoginForm @login="enterChat" />
       <p>No account yet? <span @click="showLogin = false">Sign up</span></p>
     </div>
     <div v-else>
       <h2 class="heading--md">Sign up</h2>
-      <SignupForm />
+      <SignupForm @signUp="enterChat" />
       <p>Already registered? <span @click="showLogin = true">Log in</span></p>
     </div>
   </div>
@@ -18,13 +18,18 @@
 import SignupForm from "../components/SignupForm.vue";
 import LoginForm from "../components/LoginForm.vue";
 import { ref } from "@vue/reactivity";
+import { useRouter } from "vue-router";
 
 export default {
   components: { SignupForm, LoginForm },
   setup() {
     const showLogin = ref(true);
+    const router = useRouter();
+    const enterChat = () => {
+      router.push({ name: "Chatroom" });
+    };
 
-    return { showLogin };
+    return { showLogin, enterChat };
   },
 };
 </script>
@@ -88,5 +93,10 @@ export default {
 .welcome span {
   cursor: pointer;
   text-decoration: underline;
+}
+
+button {
+  @include btn();
+  transition: all 0.2s ease-in-out;
 }
 </style>

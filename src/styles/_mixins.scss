@@ -11,3 +11,19 @@
       @content;
     }
   }
+
+  // Button styling
+  @mixin btn() {
+    text-decoration: none;
+    background-color: #9df8e7;
+    color: #000;
+    font-weight: 400;
+    border: 0;
+    border-radius: 20px;
+    padding: 16px 20px;
+
+    &:hover {
+      background-color: #94eddc;
+      transform: scale(1.02);
+    }
+  }
