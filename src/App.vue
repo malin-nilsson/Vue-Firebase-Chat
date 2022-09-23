@@ -31,22 +31,11 @@ body {
 
 .error {
   color: #ff3f80;
-  font-size: 14px;
+  font-size: 1rem;
+  margin: 5px 0px;
 }
 
 button {
-  text-decoration: none;
-  background: #a8f5e6;
-  color: rgb(40, 40, 40);
-  border: 0;
-  border-radius: 20px;
-  padding: 17px 20px;
-  font-size: 0.9rem;
-  width: 100%;
-  margin: 10px 0px;
-
-  &:hover {
-    cursor: pointer;
-  }
+  @include btn();
 }
 </style>

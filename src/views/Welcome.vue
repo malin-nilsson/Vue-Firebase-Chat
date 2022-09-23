@@ -94,8 +94,4 @@ export default {
   cursor: pointer;
   text-decoration: underline;
 }
-
-button {
-  @include btn();
-}
 </style>
