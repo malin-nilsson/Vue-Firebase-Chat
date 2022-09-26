@@ -23,7 +23,9 @@
     <div class="error">
       {{ error }}
     </div>
-    <button>Log in</button>
+    <button>
+      <span class="material-symbols-outlined"> login </span>Log in
+    </button>
   </form>
 </template>
   
@@ -50,5 +52,15 @@ export default {
 };
 </script>
   
-  <style>
+  <style lang="scss" scoped>
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    text-decoration: none;
+    margin-right: 5px;
+  }
+}
 </style>

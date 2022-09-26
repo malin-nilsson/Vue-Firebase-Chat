@@ -18,14 +18,19 @@ body {
 }
 
 .app-container {
-  width: 100%;
-  margin: 80px auto;
+  width: 90%;
+  margin: 40px auto;
   border-radius: 20px;
   box-shadow: 2px 4px 6px rgba(28, 6, 49, 0.1);
   background: white;
 
   @include tablet-and-up {
     width: 80%;
+    margin: 70px auto;
+  }
+
+  @include desktop-and-up {
+    width: 70%;
   }
 }
 
