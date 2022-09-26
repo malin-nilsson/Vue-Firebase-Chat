@@ -24,16 +24,20 @@ export default {
     const message = ref("");
 
     const handleSubmit = async () => {
-      const chat = {
-        name: user.value.displayName,
-        message: message.value,
-        createdAt: timestamp(),
-      };
+      if (message.value === "") {
+        alert("You forgot to write something...");
+      } else {
+        const chat = {
+          name: user.value.displayName,
+          message: message.value,
+          createdAt: timestamp(),
+        };
 
-      await addDoc(chat);
+        await addDoc(chat);
 
-      if (!error.value) {
-        message.value = "";
+        if (!error.value) {
+          message.value = "";
+        }
       }
     };
 
