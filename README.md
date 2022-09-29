@@ -1,19 +1,13 @@
-# vue-chat
+# Vue Live Chat
+Chat app built with Vue 3 (Composition API) and Firebase. Users can create an account, log in and live chat with other users.
 
-## Project setup
-```
-npm install
-```
+## Installation
+1. Clone the repo\
+`git clone https://github.com/malin-nilsson/Vue-Firebase-Chat`
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+2. Install npm packages\
+`npm install`
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+3. Run Vue \
+Open a new terminal\
+`npm run serve`
