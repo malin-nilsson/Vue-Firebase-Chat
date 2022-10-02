@@ -1,13 +1,12 @@
 <template>
   <div class="app-container welcome">
-    <h1 class="heading--lg">Welcome</h1>
     <div v-if="showLogin">
-      <h2 class="heading--md">Log in</h2>
+      <h1 class="heading--lg">Log in</h1>
       <LoginForm @login="enterChat" />
       <p>No account yet? <span @click="showLogin = false">Sign up</span></p>
     </div>
     <div v-else>
-      <h2 class="heading--md">Sign up</h2>
+      <h2 class="heading--lg">Sign up</h2>
       <SignupForm @signUp="enterChat" />
       <p>Already registered? <span @click="showLogin = true">Log in</span></p>
     </div>
@@ -42,15 +41,8 @@ export default {
 }
 
 .welcome .heading--lg {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-.welcome .heading--md {
-  font-size: 1.2rem;
-  font-weight: 400;
-  padding: 30px 0px 10px;
-  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .welcome p {
@@ -76,17 +68,17 @@ export default {
   display: block;
   margin-left: 5px;
   text-align: left;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 0.85rem;
 }
 .welcome input {
   width: 100%;
   padding: 12px;
-  border-radius: 20px;
+  border-radius: 15px;
   border: 1px solid #d3d3d3;
   outline: none;
   color: #5e5e5e;
-  margin: 8px auto;
+  margin: 5px auto;
   font-size: 0.9rem;
   box-sizing: border-box;
 }

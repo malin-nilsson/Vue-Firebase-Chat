@@ -6,7 +6,7 @@
         type="text"
         id="userName"
         required
-        placeholder="Username"
+        placeholder="Choose a username"
         v-model="displayName"
       />
     </div>
@@ -17,7 +17,7 @@
         type="email"
         id="email"
         required
-        placeholder="Email"
+        placeholder="you@email.com"
         v-model="email"
       />
     </div>
@@ -28,7 +28,7 @@
         type="password"
         id="password"
         required
-        placeholder="Password"
+        placeholder="Enter 6 characters or more"
         v-model="password"
       />
     </div>

@@ -38,23 +38,32 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../styles/mixins";
+
 nav {
   padding: 20px;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+
+  @include tablet-and-up {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   p {
     margin: 2px auto;
-    font-size: 16px;
+    font-size: 1rem;
     color: #444;
   }
 
   p.email {
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #999;
   }
   .email span {
@@ -64,6 +73,7 @@ nav {
   .display-name {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
 
     span {
       margin-right: 5px;
@@ -73,7 +83,14 @@ nav {
   button {
     display: flex;
     align-items: center;
-    width: 7rem;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px;
+
+    @include tablet-and-up {
+      width: 7rem;
+      margin: unset;
+  }
   }
 }
 </style>

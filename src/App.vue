@@ -22,7 +22,7 @@ body {
   margin: 40px auto;
   border-radius: 20px;
   box-shadow: 2px 4px 6px rgba(28, 6, 49, 0.1);
-  background: white;
+  background: #fff;
 
   @include tablet-and-up {
     width: 80%;

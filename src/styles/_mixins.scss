@@ -21,13 +21,13 @@
     font-size: 0.9rem;
     width: 100%;
     border: 0;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 16px 20px;
     transition: all 0.2s ease-in-out;
 
     &:hover {
       cursor: pointer;
-      background-color: #94eddc;
+      background-color: #aafced;
       transform: scale(1.02);
     }
   }
